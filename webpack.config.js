@@ -5,10 +5,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const analyzeBundle = process.argv.indexOf('--analyze-bundle') !== -1;
 
-const minimize
-    = process.argv.indexOf('-p') !== -1
-        || process.argv.indexOf('--optimize-minimize') !== -1;
-
+const minimize = false;
 const config = {
     devtool: 'source-map',
     mode: minimize ? 'production' : 'development',
